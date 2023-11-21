@@ -3,38 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+      rel="stylesheet" />
     <title>WeatherWise</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/index.css" />
   </head>
   <body>
-    <header>
-      <input type="search" placeholder="Enter a city..." required />
-      <input type="submit" value="Search" />
-    </header>
-    <main>
-      <h1>Dublin</h1>
-      <div>
-        <p>
-          Monday 20:46, moderate rain
-          <br />
-          Humidity: 87%, Wind: 7.2km/h
-        </p>
-      </div>
-      <div class="mainTemp">🌦️ 14°C</div>
-    </main>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/Lucille-SH" target="_blank"
-        >Lucille Shankland</a
-      >, and is
-      <a href="https://github.com/Lucille-SH/weather-wise" target="_blank"
-        >open-sourced on Github</a
-      >
-      and
-      <a href="https://weatherwise-shecodes-app.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >
-    </footer>
-    <script src="index.js"></script>
+    <div class="container">
+      <header>
+        <input
+          type="search"
+          placeholder="Enter a city..."
+          required
+          id="city-search" />
+        <input type="submit" value="Search" id="city-submit" />
+      </header>
+      <hr class="divider" />
+      <main class="main-city-info">
+        <h1 class="city">Dublin</h1>
+        <div class="city-details">
+          <p>
+            Monday 20:46, moderate rain
+            <br />
+            Humidity: <span class="humidity-percent">87%</span>, Wind:
+            <span class="wind-kms">7.2km/h</span>
+          </p>
+        </div>
+        <div class="main-temp">🌦️ 14°C</div>
+      </main>
+      <hr class="divider" />
+      <footer>
+        This project was coded by
+        <a href="https://github.com/Lucille-SH" target="_blank"
+          >Lucille Shankland</a
+        >, and is
+        <a href="https://github.com/Lucille-SH/weather-wise" target="_blank"
+          >open-sourced on Github</a
+        >
+        and
+        <a href="https://weatherwise-shecodes-app.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>

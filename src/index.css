@@ -1,0 +1,126 @@
+.first-color {
+  background: #247291;
+}
+
+.second-color {
+  background: #f8da5b;
+}
+
+.third-color {
+  background: #eef2e2;
+}
+
+.fourth-color {
+  background: #f5f9ee;
+}
+
+body {
+  background-color: #4999b9;
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  background-color: #fbfdf6;
+  display: block;
+  margin: 80px auto;
+  padding: 30px;
+  width: 600px;
+  border-radius: 20px;
+  border: solid 3px #fbfdf6;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+header {
+  padding: 20px 0;
+}
+
+#city-search,
+#city-submit {
+  font-size: 20px;
+  line-height: 25px;
+  border-radius: 5px;
+}
+
+#city-search {
+  width: 75%;
+  padding: 10px;
+  line-height: 25px;
+  font-size: 18px;
+  margin-right: 5px;
+  border: solid 2px rgba(37, 111, 160, 0.5);
+}
+
+#city-submit {
+  background-color: #f8da5b;
+  color: white;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.4px;
+  padding: 10px 20px;
+  border: solid 2px #f8da5b;
+  transition: all 200ms ease-in-out;
+  font-weight: 800;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+#city-submit:hover {
+  background-color: white;
+  color: #f8da5b;
+  border: solid 2px #f8da5b;
+  cursor: pointer;
+  text-shadow: none;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(37, 111, 160, 1);
+}
+
+footer a {
+  font-weight: 00;
+  color: rgb(2, 73, 120);
+}
+
+.divider {
+  border: solid 3px rgba(37, 111, 160, 0.5);
+}
+
+.main-city-info {
+  padding: 10px;
+}
+
+.city {
+  text-align: left;
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: rgba(37, 111, 160, 1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.city-details p {
+  color: rgba(37, 111, 160, 1);
+  text-align: left;
+  font-size: 13px;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.main-temp {
+  font-size: 60px;
+  font-weight: 700;
+  color: rgba(37, 111, 160, 1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-align: right;
+  position: relative;
+  bottom: 102px;
+  right: 20px;
+}
+
+.humidity-percent,
+.wind-kms {
+  font-weight: 800;
+  color: #ad8f07;
+}
