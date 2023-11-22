@@ -14,13 +14,23 @@
   background: #f5f9ee;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background-color: #4999b9;
+  margin: 0;
+  background-repeat: no-repeat;
+  background: linear-gradient(
+    110.2deg,
+    rgb(54, 197, 240) 8.2%,
+    rgb(74, 21, 75) 92.4%
+  );
   font-family: "Nunito", sans-serif;
 }
 
 .container {
-  background-color: #fbfdf6;
+  background-color: rgba(251, 253, 246, 0.5);
   display: block;
   margin: 80px auto;
   padding: 30px;
@@ -73,7 +83,7 @@ header {
 footer {
   padding: 20px;
   text-align: center;
-  font-size: 12px;
+  font-size: 145x;
   color: rgba(37, 111, 160, 1);
 }
 
