@@ -9,22 +9,24 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
       rel="stylesheet" />
     <title>WeatherWise</title>
-    <link rel="stylesheet" href="src/index.css" />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <header>
-        <input
-          type="search"
-          placeholder="Enter a city..."
-          required
-          id="city-search" />
-        <input type="submit" value="Search" id="city-submit" />
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            id="city-search" />
+          <input type="submit" value="Search" id="city-submit" />
+        </form>
       </header>
       <hr class="divider" />
       <main class="selected-city">
         <div class="main-city-details">
-          <h1 class="main-city">Dublin</h1>
+          <h1 class="main-city" id="main-city">Dublin</h1>
           <p>
             Monday 20:46, moderate rain
             <br />
