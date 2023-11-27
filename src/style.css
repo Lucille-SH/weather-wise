@@ -126,7 +126,37 @@ footer a {
 
 .humidity-percent,
 .wind-kms {
-  font-weight: 600;
+  font-weight: 800;
   color: #4b2b5f;
-  text-shadow: 0.9px 0.9px 0px rgba(54, 195, 237, 1);
+}
+
+.weather-forecast {
+  text-align: center;
+  color: #4c2b5f;
+  font-weight: 700;
+  padding: 20px;
+  background-color: rgba(54, 195, 237, 0.1);
+  border-radius: 20px;
+}
+
+.day {
+  font-size: 18px;
+  color: #4c2b5f;
+  opacity: 0.7;
+}
+
+.weather-forecast-icon {
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 0 auto;
+}
+
+.weather-temperatures-high {
+  font-size: 16px;
+}
+
+.weather-temperatures-low {
+  font-size: 15px;
+  opacity: 0.7;
 }
