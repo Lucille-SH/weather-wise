@@ -134,11 +134,15 @@ footer a {
   text-align: center;
   color: #4c2b5f;
   font-weight: 700;
-  padding: 20px;
+  padding: 10px 20px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.weather-forecast-day {
   background-color: rgba(54, 195, 237, 0.1);
   border-radius: 20px;
-  max-width: 85px;
-  margin: 10px 20px 20px;
+  padding: 10px;
 }
 
 .day {

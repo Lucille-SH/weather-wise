@@ -52,7 +52,34 @@ function handleCityClick(event) {
   refreshWeather(cityInput.value);
 }
 
+function displayForecast() {
+  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class = "weather-forecast-day">
+      <div class="day">${day}</div>
+            <div class="weather-forecast-icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
+                alt="weather-icon"
+                class="weather-forecast-icon" />
+            </div>
+            <div class="weather-temperatures">
+              <span class="weather-temperatures-high">18</span>
+              <span class="weather-temperatures-low">10</span>
+            </div>
+            </div>`;
+  });
+
+  let forecastElement = document.querySelector("#weather-forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let changeCity = document.querySelector("#city-submit");
 changeCity.addEventListener("click", handleCityClick);
 
 refreshWeather("Dublin");
+displayForecast();
