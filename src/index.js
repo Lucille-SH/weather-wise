@@ -56,32 +56,39 @@ function handleCityClick(event) {
 
 function getForecast(city) {
   apiKey = "66b4t441aodafc3797bfd80f9495a36b";
-  apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios(apiUrl).then(displayForecast);
 }
 
-function displayForecast(response) {
-  console.log(response.data);
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
+function displayForecast(response) {
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class = "weather-forecast-day">
-      <div class="day">${day}</div>
-            <div class="weather-forecast-icon">
-              <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
-                alt="weather-icon"
-                class="weather-forecast-icon" />
-            </div>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `<div class = "weather-forecast-day">
+      <div class="day">${formatDay(day.time)}</div>
+              <img src="${
+                day.condition.icon_url
+              }" class="weather-forecast-icon" id="weather-forecast-icon"
             <div class="weather-temperatures">
-              <span class="weather-temperatures-high">18</span>
-              <span class="weather-temperatures-low">10</span>
+              <span class="weather-temperatures-high">${Math.round(
+                day.temperature.maximum
+              )}°</span>
+              <span class="weather-temperatures-low">${Math.round(
+                day.temperature.minimum
+              )}°</span>
             </div>
             </div>`;
+    }
   });
 
   let forecastElement = document.querySelector("#weather-forecast");

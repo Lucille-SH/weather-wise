@@ -18,8 +18,7 @@ body {
   display: block;
   margin: 80px auto;
   padding: 30px;
-  max-width: 600px;
-  min-width: 502px;
+  width: 600px;
   border-radius: 20px;
   border: none;
   box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.3);
@@ -141,28 +140,29 @@ footer a {
 
 .weather-forecast-day {
   background-color: rgba(54, 195, 237, 0.1);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px;
 }
 
 .day {
-  font-size: 18px;
+  font-size: 16px;
   color: #4c2b5f;
   opacity: 0.7;
 }
 
 .weather-forecast-icon {
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   display: block;
   margin: 0 auto;
 }
 
 .weather-temperatures-high {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .weather-temperatures-low {
-  font-size: 15px;
+  font-size: 14px;
   opacity: 0.7;
+  padding-left: 5px;
 }
