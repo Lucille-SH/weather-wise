@@ -15,6 +15,8 @@ function updateWeatherData(response) {
   conditionElement.innerHTML = response.data.condition.description;
   dayTimeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="main-weather-icon">`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -52,7 +54,15 @@ function handleCityClick(event) {
   refreshWeather(cityInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  apiKey = "66b4t441aodafc3797bfd80f9495a36b";
+  apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -82,4 +92,3 @@ let changeCity = document.querySelector("#city-submit");
 changeCity.addEventListener("click", handleCityClick);
 
 refreshWeather("Dublin");
-displayForecast();
